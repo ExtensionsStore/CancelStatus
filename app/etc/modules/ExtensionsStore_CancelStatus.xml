@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Livechat 
+ * 
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CancelStatus
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+ -->
+<config>
+    <modules>
+        <ExtensionsStore_CancelStatus>
+            <active>true</active>
+            <codePool>community</codePool>
+        </ExtensionsStore_CancelStatus>
+    </modules>
+</config>

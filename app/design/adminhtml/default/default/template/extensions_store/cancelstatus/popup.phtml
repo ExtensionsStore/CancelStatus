@@ -1,0 +1,58 @@
+<?php
+/**
+ *
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CancelStatus
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+if ($this->getOrder()->canCancel()){
+$cancelledStatuses = $this->getCancelledStatuses ();
+?>
+<div id="message-popup-window-mask"></div>
+<div id="cancelstatus-popup-window" class="message-popup show">
+	<div class="message-popup-head">
+		<a href="#" onclick="cancelStatus.closePopup()" title="close"><span>close</span></a>
+		<h2><?php echo $this->__('Cancel Order') ?></h2>
+	</div>
+	<div class="message-popup-content">
+		<div class="message">
+			<form name="cancelstatus_form"
+				action="<?php echo $this->getFormAction() ?>" method="post">
+            	<?php echo $this->getBlockHtml('formkey')?>
+            	<input type="hidden" name="order_id"
+					value="<?php echo $this->getOrder()->getId() ?>" />
+				<fieldset>
+					<table>
+						<tbody>
+							<tr>
+								<td><label for="cancel_status"><?php echo $this->__('Select cancel reason: ')?></label></td>
+								<td><select name="cancel_status">
+										<option><?php echo $this->__('-- Select Reason --') ?></option>
+			            		<?php foreach ($cancelledStatuses as $code => $label){ ?>
+			                    <option value="<?php echo $code ?>"><?php echo $label ?></option>
+			            		<?php } ?>
+			            	</select></td>
+							</tr>
+							<tr>
+								<td><label for="cancel_comment"><?php echo $this->__('Cancel comment:') ?></label></td>
+								<td><textarea name="cancel_comment" class="input-text"></textarea></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<button type="submit" class="button scalable save">
+										<span> <span><?php echo $this->__('Cancel') ?></span>
+										</span>
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<?php 
+}
+?>
