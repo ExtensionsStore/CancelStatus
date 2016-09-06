@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/**
+ * 
+ *
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CancelStatus
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+
+ -->
+<layout version="0.1.0">
+
+ 	<adminhtml_sales_order_view>
+         <reference name="head">
+             <action method="addItem">
+                 <type>skin_js</type>
+                 <name>extensions_store/cancelstatus.js</name>
+             </action>	 
+             <action method="addItem">
+                 <type>skin_css</type>
+                 <name>extensions_store/cancelstatus.css</name>
+             </action>	                         
+         </reference>
+         <reference name="before_body_end">
+         	<block type="cancelstatus/adminhtml_popup" name="cancelstatus.popup" template="extensions_store/cancelstatus/popup.phtml" />
+         </reference>
+ 	</adminhtml_sales_order_view>
+ 	
+
+
+</layout>

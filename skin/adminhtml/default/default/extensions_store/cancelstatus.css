@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+/**
+ *
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CancelStatus
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+ 
+#message-popup-window-mask {
+ 	display: none;
+}
+ 
+#cancelstatus-popup-window {
+ 	display: none;
+}

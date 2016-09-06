@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CancelStatus
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+-->
+<config>
+    <modules>
+        <ExtensionsStore_CancelStatus>
+            <version>1.0.0</version>
+        </ExtensionsStore_CancelStatus>
+    </modules>
+    <adminhtml>
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <cancelstatus_override_cancel_button>
+                        <class>cancelstatus/adminhtml_observer</class>
+                        <method>adminhtmlBlockHtmlBefore</method>
+                    </cancelstatus_override_cancel_button>
+                </observers>
+            </adminhtml_block_html_before>    
+            <order_cancel_after>
+                <observers>
+                    <cancelstatus_after_cancel_set_status>
+                        <class>cancelstatus/adminhtml_observer</class>
+                        <method>orderCancelAfter</method>
+                    </cancelstatus_after_cancel_set_status>
+                </observers>            
+            </order_cancel_after>
+        </events>
+        <layout>
+            <updates>
+                <extensions_store_cancelstatus>
+                    <file>extensions_store/cancelstatus.xml</file>
+                </extensions_store_cancelstatus>
+            </updates>
+        </layout>	    	
+    </adminhtml>
+    <global> 
+        <blocks>
+            <cancelstatus>
+                <class>ExtensionsStore_CancelStatus_Block</class>
+            </cancelstatus>
+        </blocks>    
+        <helpers>
+            <cancelstatus>
+                <class>ExtensionsStore_CancelStatus_Helper</class>
+            </cancelstatus>
+        </helpers>
+        <models>
+            <cancelstatus>
+                <class>ExtensionsStore_CancelStatus_Model</class>
+            </cancelstatus> 
+        </models>     
+    </global>
+</config>

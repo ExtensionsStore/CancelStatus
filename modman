@@ -1,0 +1,6 @@
+app/code/community/ExtensionsStore/CancelStatus                                     app/code/community/ExtensionsStore/CancelStatus
+app/design/adminhtml/default/default/layout/extensions_store/cancelstatus.xml       app/design/adminhtml/default/default/layout/extensions_store/cancelstatus.xml
+app/design/adminhtml/default/default/template/extensions_store/cancelstatus         app/design/adminhtml/default/default/template/extensions_store/cancelstatus
+app/etc/modules/ExtensionsStore_CancelStatus.xml                                    app/etc/modules/ExtensionsStore_CancelStatus.xml
+skin/adminhtml/default/default/extensions_store/cancelstatus.css                    skin/adminhtml/default/default/extensions_store/cancelstatus.css
+skin/adminhtml/default/default/extensions_store/cancelstatus.js                     skin/adminhtml/default/default/extensions_store/cancelstatus.js
